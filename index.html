@@ -228,6 +228,33 @@
                         <p>The Node Repeater is a tool to receive via a WebSocket every Nano Block as it is confirmed by the Nano Network. If you run your own Nano Node, you can get similar results by running the above <a href="#node-websocket">Node WebSocket example</a> without specifying accounts (which is disabled in my Node WebSocket). However in the Node Repeater, Nano Blocks are grouped and sent every periodically (defined in response.duration in milliseconds) to conserve bandwidth/processing. This endpoint will not filter on specific accounts.</p>
                         <p>Endpoint:</p>
                         <pre><code>wss://node.somenano.com/repeater</code></pre>
+                        <p>Response:</p>
+                        <pre style="background-color: lightgray">
+{
+    "block_dump": {
+        "dtg": "2021-01-22T23:18:48.276Z",  // Date WebSocket message was sent from SomeNano Node
+        "topic": "confirmation",
+        "cps": 2.4,                         // Confirmations per second as calculated by the SomeNano Node
+        "duration": 5000,                   // Amount of time (milliseconds) this dump of Nano Blocks covers
+        "blocks": [                         // Array of all Nano Blocks confirmed during this window
+            {
+                ... Nano Block Data ...
+            },
+            {
+                ... Nano Block Data ...
+            }
+        ]
+  }
+}
+                        </pre>
+                        <pre style="background-color: lightgray">
+{
+    "dtg": "2021-01-22T23:25:18.302Z",      // Date WebSocket message was sent from SomeNano Node
+    "topic": "cps",
+    "cps": 3.8,                             // Confirmations per second as calculated by the SomeNano Node
+    "seconds": 30                           // CPS is calculated as average over the last this number of seconds
+}
+                        </pre>
                         <p>Live Examples:</p>
                         <p>WebSocket message to subscribe to all confirmations:</p>
                         <p>
