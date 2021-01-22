@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="nano" content="nano_1somenanerzdzdbyr4y6x996qbo764ifxk8beuhphydmwn1agpzkwquqqick" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="/css/index.css" rel="stylesheet">
+
+    <script src="/js/index.js"></script>
+
+    <title>SomeNano Node | A free-to-use Public Nano Node since 2021</title>
+  </head>
+  <body>
+
+    <div class="container">
+
+        <div class="jumbotron py-3">
+            <div class="d-flex">
+                <p>
+                    <a href="/"><img src="https://somenano.com/images/somenano.png" class="site-logo"></a>
+                </p>
+                <p>
+                    <div>
+                        <h1 class="display-4"><a href="/" class="text-decoration-none text-dark">SomeNano</a></h1>
+                        <br>
+                        <p class="lead">A free-to-use Public Nano Node since 2021</p>
+                    </div>
+                </p>
+            </div>
+            <hr class="my-4">
+            <p>This page provides an overview of the capabilities available to you from the SomeNano Node. This Nano Node comes with no service agreement nor any guarantee of availability. If you are looking to experiment or prototype with the Nano Network, the SomeNano Node is a good place to start. If you are looking to host an application where you will need/want to assure operation and availability, I recommend you <a href="https://docs.nano.org/running-a-node/overview/" target="_new">host your own Nano Node</a>. If you have any questions, please reach out to me via <a href="mailto:jason@somenano.com">email</a> (<a href="/publickey.jason@somenano.com.asc">PGP</a>) or via Twitter <a href="https://twitter.com/SomeNanoTweets">@SomeNanoTweets</a>.</p>
+            <p>To learn more on interacting with a Public Nano Node read my "Getting Started" series of articles on Medium</p>
+            <p>
+                <ol>
+                    <li><a href="https://medium.com/nanocurrency/getting-started-developing-with-nano-currency-part-1-build-your-foundation-cec2013657e1" target="_new">Build Your Foundation</a></li>
+                    <li><a href="https://somenano.medium.com/getting-started-developing-with-nano-currency-part-2-interacting-with-public-and-private-nano-adb98ef57fbf" target="_new">Interacting with Public and Private Nano Nodes</a></li>
+                    <li><a href="#" target="_new">Interacting with Programmable Software Wallets</a> - not yet published</li>
+                </ol>
+            </p>
+        </div>
+
+        <div id="content">
+
+            <div class="row mb-4">
+                <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3">
+                    <h2 class="text-center">Navigation</h2>
+                    <div class="list-group">
+                        <a href="#node-monitor" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Node Monitor</span></a>
+                        <a href="#node-rpc" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Node RPC</span></a>
+                        <a href="#node-websocket" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Node WebSocket</span></a>
+                        <a href="#node-repeater" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Node Repeater</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-3" id="node-monitor">
+
+                <div class="row">
+                    <h2>Node Monitor (<a href="#node-monitor" class="text-decoration-none">#</a>)</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p>The SomeNano Node Monitor provides a real-time status of the underlying Nano Node. This page is build from the <a href="https://github.com/NanoTools/nanoNodeMonitor" target="_new">Nano Node Monitor</a> project.</p>
+                        <p>Below is an iframe for a quick view. The full page can be found here: <a href="https://node.somenano.com/monitor">https://node.somenano.com/monitor</a>.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <iframe src="https://node.somenano.com/monitor/" title="SomeNano Node Monitor" style="height:400px; width:100%;"></iframe>
+                </div>
+
+            </div>
+
+            <div class="row my-3" id="node-rpc">
+
+                <div class="row">
+                    <h2>Node RPC (<a href="#node-rpc" class="text-decoration-none">#</a>)</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p>The Node RPC is available with a subset of commands of a full <a href="https://docs.nano.org/commands/rpc-protocol/#node-rpcs" target="_new">Nano Node RPC</a>. Requests are limited and limits are visible in the responses. The endpoint is running a <a href="https://github.com/Joohansson/NanoRPCProxy" target="_new">Nano RPC Proxy</a> to handle requests.</p>
+                        <p>Additional Public Nano Nodes with various capabilities can be seen here: <a href="https://publicnodes.somenano.com" target="_new">https://publicnodes.somenano.com</a></p>
+                        <p>Endpoint:</p>
+                        <pre><code>https://node.somenano.com/proxy</code></pre>
+                        <p>Live Example:</p>
+                        <p>GET Request: <a href="https://node.somenano.com/proxy?action=version" target="_new">https://node.somenano.com/proxy?action=version</a></p>
+                        <p>or POST Request: https://node.somenano.com/proxy; with params: <code>{ action: "version" }</code></p>
+                        <p>
+                            <pre style="background-color: lightgray;">
+<code id="version-example"></code>
+                            </pre>
+                            <script>
+                                get_request('https://node.somenano.com/proxy?action=version', function(text) {
+                                    document.getElementById('version-example').innerText = JSON.stringify(JSON.parse(text), null, 2);
+                                });
+                            </script>
+                        </p>
+                        <p>Below you will find a full listing of all available RPC commands.</p>
+                        <p>Standard Node RPC Commands:</p>
+                        <p>
+                            <ul>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#account_history" target="_new">account_history</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#account_info" target="_new">account_info</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#account_balance" target="_new">account_balance</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#accounts_balances" target="_new">accounts_balances</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#account_key" target="_new">account_key</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#account_representative" target="_new">account_representative</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#account_weight" target="_new">account_weight</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#accounts_frontiers" target="_new">accounts_frontiers</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#accounts_pending" target="_new">accounts_pending</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#active_difficulty" target="_new">active_difficulty</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#available_supply" target="_new">available_supply</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#block_account" target="_new">block_account</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#block_info" target="_new">block_info</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#block_count" target="_new">block_count</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#block_create" target="_new">block_create</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#block_confirm" target="_new">block_confirm</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#block_count_type" target="_new">block_count_type</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#blocks_info" target="_new">blocks_info</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#chain" target="_new">chain</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#confirmation_quorum" target="_new">confirmation_quorum</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#delegators" target="_new">delegators</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#delegators_count" target="_new">delegators_count</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#frontiers" target="_new">frontiers</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#key_create" target="_new">key_create</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#pending" target="_new">pending</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#pending_exists" target="_new">pending_exists</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#process" target="_new">process</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#representatives" target="_new">representatives</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#representatives_online" target="_new">representatives_online</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#sign" target="_new">sign</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#successors" target="_new">successors</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#work_validate" target="_new">work_validate</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#validate_account_number" target="_new">validate_account_number</a></li>
+                                <li><a href="https://docs.nano.org/commands/rpc-protocol/#version" target="_new">version</a></li>
+                            </ul>
+                        </p>
+                        <p>Non-Standard Node RPC Commands:</p>
+                        <p>
+                            <ul>
+                                <li><a href="https://github.com/Joohansson/NanoRPCProxy#special-rpc-commands" target="_new">price</a></li>
+                                <li><a href="https://github.com/Joohansson/NanoRPCProxy#special-rpc-commands" target="_new">mnano_to_raw</a></li>
+                                <li><a href="https://github.com/Joohansson/NanoRPCProxy#special-rpc-commands" target="_new">mnano_from_raw</a></li>
+                                <li><a href="https://github.com/Joohansson/NanoRPCProxy#special-rpc-commands" target="_new">verified_accounts</a></li>
+
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row my-3" id="node-websocket">
+
+                <div class="row">
+                    <h2>Node WebSocket (<a href="#node-websocket" class="text-decoration-none">#</a>)</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p>The Node WebSocket is available with a subset of commands of a full <a href="https://docs.nano.org/integration-guides/websockets/" target="_new">Nano Node WebSocket</a>. Requests are limited, for example max 100 addresses for confirmation monitoring. The endpoint is running a <a href="https://github.com/Joohansson/NanoRPCProxy" target="_new">Nano RPC Proxy</a> to handle requests.</p>
+                        <p>Additional Public Nano Nodes with various capabilities can be seen here: <a href="https://publicnodes.somenano.com" target="_new">https://publicnodes.somenano.com</a></p>
+                        <p>Endpoint:</p>
+                        <pre><code>wss://node.somenano.com/websocket</code></pre>
+                        <p>Live Example:</p>
+                        <p>WebSocket message:</p>
+                        <p>
+                            <pre style="background-color: lightgray">
+<code>{
+    "action": "subscribe",
+    "topic": "confirmation",
+    "options": {
+        "accounts": [
+            "nano_1somenanerzdzdbyr4y6x996qbo764ifxk8beuhphydmwn1agpzkwquqqick"
+        ]
+    }
+}</code>
+                            </pre>
+                        </p>
+                        <p>Response: (updated <span id="websocket-response-updated">n/a</span>)</p>
+                        <p>
+                            <pre class="pre-scrollable" style="background-color:lightgray; height:350px;">
+<code id="websocket-message"></code>
+                            </pre>
+                            <script>
+
+                                new_websocket('wss://node.somenano.com/websocket', function(socket) {
+                                    var params = {
+                                        action: 'subscribe',
+                                        topic: 'confirmation',
+                                        options: {
+                                            accounts: [
+                                                'nano_1somenanerzdzdbyr4y6x996qbo764ifxk8beuhphydmwn1agpzkwquqqick',
+                                            ]
+                                        }
+                                    }
+                                    socket.send(JSON.stringify(params));
+                                }, function(response) {
+                                    document.getElementById('websocket-response-updated').innerText = new Date();
+                                    document.getElementById('websocket-message').innerText = '\n'+JSON.stringify(JSON.parse(response.data), null, 2);
+                                });
+                                
+                            </script>
+                        </p>
+                        <p>To see the WebSocket data of a confirmed Nano Block, send any amount of Nano to <a href="nano://nano_1somenanerzdzdbyr4y6x996qbo764ifxk8beuhphydmwn1agpzkwquqqick">nano_1somenanerzdzdbyr4y6x996qbo764ifxk8beuhphydmwn1agpzkwquqqick</a> (<a href="https://nanocrawler.cc/explorer/account/nano_1somenanerzdzdbyr4y6x996qbo764ifxk8beuhphydmwn1agpzkwquqqick/history" target="_new">NanoCrawler link</a>)</p>
+                        <p>Or scan this qrcode to send: <img src="https://somenano.com/images/qrcode-nano_somenanerz.png" style="width:128px;height:128px;"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-3" id="node-repeater">
+
+                <div class="row">
+                    <h2>Node Repeater (<a href="#node-repeater" class="text-decoration-none">#</a>)</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p>The Node Repeater is a tool to receive via a WebSocket every Nano Block as it is confirmed by the Nano Network. If you run your own Nano Node, you can get similar results by running the above <a href="#node-websocket">Node WebSocket example</a> without specifying accounts (which is disabled in my Node WebSocket). However in the Node Repeater, Nano Blocks are grouped and sent every periodically (defined in response.duration in milliseconds) to conserve bandwidth/processing. This endpoint will not filter on specific accounts.</p>
+                        <p>Endpoint:</p>
+                        <pre><code>wss://node.somenano.com/repeater</code></pre>
+                        <p>Live Examples:</p>
+                        <p>WebSocket message to subscribe to all confirmations:</p>
+                        <p>
+                            <pre style="background-color: lightgray">
+<code>{
+    action: 'subscribe',
+    topic: 'confirmation'
+}</code>
+                            </pre>
+                        </p>
+                        <p>Response: (updated <span id="repeater-response-updated">n/a</span>)</p>
+                        <p>
+                            <pre class="pre-scrollable" style="background-color:lightgray; height:350px;">
+                                <code id="repeater-message"></code>
+                            </pre>
+                            <script>
+
+                                new_websocket('wss://node.somenano.com/repeater', function(socket) {
+                                    var params = {
+                                        action: 'subscribe',
+                                        topic: 'confirmation'
+                                    };
+                                    socket.send(JSON.stringify(params));
+                                }, function(response) {
+                                    document.getElementById('repeater-response-updated').innerText = new Date();
+                                    document.getElementById('repeater-message').innerText = '\n'+JSON.stringify(JSON.parse(response.data), null, 2);
+                                });
+                                
+                            </script>
+                        </p>
+                        <p>WebSocket message to subscribe to confirmations per second:</p>
+                        <p>
+                            <pre style="background-color: lightgray">
+<code>{
+    action: 'subscribe',
+    topic: 'cps'
+}</code>
+                            </pre>
+                        </p>
+                        <p>Response: (updated <span id="cps-response-updated">n/a</span>)</p>
+                        <p>
+                            <pre class="pre-scrollable" style="background-color:lightgray; height:350px;">
+                                <code id="cps-message"></code>
+                            </pre>
+                            <script>
+
+                                new_websocket('wss://node.somenano.com/repeater', function(socket) {
+                                    var params = {
+                                        action: 'subscribe',
+                                        topic: 'cps'
+                                    };
+                                    socket.send(JSON.stringify(params));
+                                }, function(response) {
+                                    document.getElementById('cps-response-updated').innerText = new Date();
+                                    document.getElementById('cps-message').innerText = '\n'+JSON.stringify(JSON.parse(response.data), null, 2);
+                                });
+                                
+                            </script>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    
+    
+  </body>
+</html>
